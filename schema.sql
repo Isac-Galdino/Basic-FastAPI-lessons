@@ -3,3 +3,6 @@ CREATE TABLE IF NOT EXISTS produtos (
     nome TEXT NOT NULL CHECK (length(trim(nome)) > 0),
     preco REAL NOT NULL CHECK (preco > 0)
 );
+
+ALTER TABLE produtos
+ADD COLUMN fabricante INTEGER NOT NULL DEFAULT 0;
