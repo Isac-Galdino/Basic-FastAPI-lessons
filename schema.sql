@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS produtos (
 );
 
 ALTER TABLE produtos
-ADD COLUMN fabricante INTEGER NOT NULL DEFAULT 0;
+ADD estoque INTEGER NOT NULL CHECK (preco > 0);
